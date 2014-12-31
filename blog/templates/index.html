@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+	{% for Post in posts %}
+		<figure>
+			<img class "img-post" src="{{ MEDIA_URL }}{{ Post.img }}">
+		</figure>
+		<section class="content">
+			<h2>{{ Post.title }}</h2>
+			<h3>{{Post.created}}</h3>
+				<a class "button" href={{ Post.slug }}>Ver más </a>
+		</section>
+	{% endfor %}
+{% endblock %}

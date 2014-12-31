@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Blog Comunidad</title>
+	<link rel="stylesheet" href="{% static "css/style.css" %}">
+
+</head>
+<body>
+	<header>
+	<h1><a href="/">Blog Comunidad</a></h1>
+	<figure>
+		<a href="https://mejorando.la/" target="_blank">
+			<img src="{% static "img/mejorandola.jpg" %}" alt="Mejorando.la">
+		</a>
+	</figure>
+	<figure>
+		<a href="https://cursos.mejorando.la/" target="_blank">
+			<img src="{% static "img/platzi-logo.jpg" %}" alt="Platzi">
+		</a>
+	</figure>
+	</header>
+	<section class ="container">
+		{% block content %} {% endblock %}		
+	</section>
+	
+</body>
+</html>
